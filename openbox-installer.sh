@@ -20,14 +20,14 @@ echo 'Installing openbox and supporting applications'
 apt-get install openbox lxappearance thunar obmenu nitrogen tint2 xcompmgr xfce4-power-manager git git-core geany
 echo 'Install success with no errors =)'
 
-## Installing compton ( this is still didn't work, FIX  ME! )
-#echo 'Cloning compton repository'
-#git clone https://github.com/chjj/compton.git compton && cd compton && make && make docs && make install
-#cp misc/compton.conf /home/$USER/.compton.conf
-#cp misc/cb-compositor /usr/bin
-#cp misc/cb-include.cfg /usr/bin
-#echo 'Installing compton success'
-#echo 'Visit https://github.com/chjj/compton for more information about compton'
+## Installing compton
+echo 'Adding compton repository'
+add-apt-repository ppa:richardgv/compton && apt-get update && apt-get install compton
+echo 'Copying compton configuration'
+cp misc/compton.conf /home/$USER/.compton.conf
+cp misc/cb-compositor /usr/bin
+cp misc/cb-include.cfg /usr/bin
+echo 'Installing compton success'
 
 ## Configuring openbox , autostart , menu
 echo 'Create Openbox directory'
