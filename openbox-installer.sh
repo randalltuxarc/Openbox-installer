@@ -17,27 +17,27 @@ echo 'Update success'
 
 ## Installing openbox and supporting applications
 echo 'Installing openbox and supporting applications'
-apt-get install openbox lxappearance thunar obmenu nitrogen tint2 xcompmgr xfce4-power-manager git git-core geany
+apt-get install openbox lxappearance thunar obmenu nitrogen tint2 xcompmgr xfce4-power-manager git git-core geany ttf-droid
 echo 'Install success with no errors =)'
 
-## Installing compton
+## Installing compton and configuring cb-compositor
 echo 'Adding compton repository'
 add-apt-repository ppa:richardgv/compton && apt-get update && apt-get install compton
 echo 'Copying compton configuration'
-cp misc/compton.conf /home/$USER/.compton.conf
-cp misc/cb-compositor /usr/bin
-cp misc/cb-include.cfg /usr/bin
-echo 'Installing compton success'
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/compton.conf -O .compton.conf
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/cb-compositor && sudo mv cb-compositor /usr/bin
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/cb-include.cfg && sudo mv cb-include.cfg /usr/bin
+echo 'Installing & Configuring compton success'
 
 ## Configuring openbox , autostart , menu
 echo 'Create Openbox directory'
-mkdir -p /home/$USER/.config/openbox/
+mkdir -p /home/$USER/.config/openbox/ && cd ~/.config/openbox
 echo 'Copying autostart file'
-cp misc/openbox-autostart ~/.config/openbox/autostart
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/openbox-autostart -O autostart
 echo 'Copying rc.xml'
-cp misc/rc.xml ~/.config/openbox/rc.xml
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/openbox-rc.xml -O rc.xml
 echo 'Copying menu.xml'
-cp misc/menu.xml ~/.config/openbox/menu.xml
+wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/menu.xml -O menu.xml
 echo 'Copying file success'
 
 ## done
