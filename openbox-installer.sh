@@ -9,7 +9,7 @@
 # ex: sudo sh openbox-installer.sh
 # This scripts it's just for Ubuntu based distro
 # Please fork this scripts
-# 
+# Include: Numix Gtk themes, Numix-Circle icons , tint2rc numix , some wallpaper from numix
 ## Updating repository
 echo 'Updating Repositories'
 apt-get update && apt-get upgrade
