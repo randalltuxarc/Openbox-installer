@@ -48,8 +48,9 @@ echo 'Downloading icons'
 git clone https://github.com/numixproject/numix-icon-theme-circle.git && cd numix-icon-theme-circle && sudo mv Numix-Circle /usr/share/icons
 echo 'Icons installed'
 echo 'Configuring tint2 panel'
-mkdir ~/.config/tint2 && wget 
+mkdir ~/.config/tint2 && cd ~/.config/tint2 && wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/tint2rc && cd /home/$USER
+echo 'Tint2 installed'
 
-
-## done
-echo 'Install Openbox success'
+## Complete
+echo 'Your openbox has been installed.. Now logout and login to Openbox as your WM :)'
+echo 'randalltux :)'
