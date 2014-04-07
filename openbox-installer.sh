@@ -53,5 +53,4 @@ echo "Tint2 installed"
 wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/misc/gtkrc-2.0 -O .gtkrc-2.0
 
 ## Complete
-echo "Your openbox has been installed.. Now logout and login to Openbox as your WM and don't forget to changes themes :)"
-echo "randalltux :)"
+echo "Your openbox has been installed.. Now logout and login to Openbox as your WM :)"
