@@ -10,6 +10,8 @@
 # This scripts it's just for Ubuntu based distro
 # Please fork this scripts
 # Include: Numix Gtk themes, Numix-Circle icons , tint2rc numix , some wallpaper from numix
+# Thanks to: MyBeloved @Putriayuerlyn , M.Claudio Delvin aka Cyberking , Iyan_Squid aka XBoot , @yogo_arp , Black Orion,
+#                           Etc Session , Bagas Purwohandoyo , Aldy Torvalds aka alpoah , and YOU!
 ## Updating repository
 echo "Updating Repositories"
 apt-get update && apt-get upgrade
@@ -54,3 +56,4 @@ wget https://raw.githubusercontent.com/randalltuxarc/Openbox-installer/master/mi
 
 ## Complete
 echo "Your openbox has been installed.. Now logout and login to Openbox as your WM :)"
+
